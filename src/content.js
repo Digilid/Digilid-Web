@@ -1,7 +1,7 @@
 // All site copy lives here so the team can edit text without touching components.
 // Items marked SAMPLE are placeholders: replace with real case studies, reviews and numbers before launch.
 
-export const CONTACT_EMAIL = 'hello@digilid.com' // SAMPLE: confirm the studio inbox
+export const CONTACT_EMAIL = 'info@digilid.com' // studio contact inbox
 
 export const nav = [
   { id: 'about', label: 'About' },

@@ -145,25 +145,25 @@ export default function Hero() {
 
           <p className="hero-fade mt-8 max-w-md text-lg leading-relaxed text-canvas/70">{hero.intro}</p>
 
-          <div className="hero-fade mt-9 flex flex-wrap items-center gap-3">
-            <Magnetic>
+          <div className="hero-fade mt-9 flex flex-nowrap items-center gap-2 sm:gap-3">
+            <Magnetic className="min-w-0 flex-1 sm:flex-none">
               <a
                 href="#contact"
                 onClick={(e) => go(e, 'contact')}
-                className="group inline-flex items-center gap-3 rounded-full bg-signal px-7 py-4 font-semibold text-canvas transition-colors hover:bg-canvas hover:text-ink"
+                className="group flex w-full items-center justify-center gap-1.5 whitespace-nowrap sm:inline-flex sm:w-auto rounded-full bg-signal px-3 py-3.5 text-[14px] min-[380px]:px-4 min-[380px]:text-[15px] font-semibold sm:gap-3 sm:px-7 sm:py-4 sm:text-base text-canvas transition-colors hover:bg-canvas hover:text-ink"
               >
                 {hero.primary}
-                <Arrow className="arrow-nudge h-3.5 w-5" />
+                <Arrow className="arrow-nudge hidden h-3 w-4 min-[360px]:block sm:h-3.5 sm:w-5" />
               </a>
             </Magnetic>
-            <Magnetic>
+            <Magnetic className="min-w-0 flex-1 sm:flex-none">
               <a
                 href="#work"
                 onClick={(e) => go(e, 'work')}
-                className="group inline-flex items-center gap-3 rounded-full border border-[var(--hair-strong)] px-7 py-4 font-medium text-canvas transition-colors hover:border-canvas"
+                className="group flex w-full items-center justify-center gap-1.5 whitespace-nowrap sm:inline-flex sm:w-auto rounded-full border border-[var(--hair-strong)] px-3 py-3.5 text-[14px] min-[380px]:px-4 min-[380px]:text-[15px] font-medium sm:gap-3 sm:px-7 sm:py-4 sm:text-base text-canvas transition-colors hover:border-canvas"
               >
                 {hero.secondary}
-                <Arrow className="arrow-nudge h-3.5 w-5" />
+                <Arrow className="arrow-nudge hidden h-3 w-4 min-[360px]:block sm:h-3.5 sm:w-5" />
               </a>
             </Magnetic>
           </div>
