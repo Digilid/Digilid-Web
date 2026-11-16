@@ -68,7 +68,7 @@ export default function About() {
             {about.cards.map((c, i) => (
               <article
                 key={c.title}
-                className={`mission-card group relative overflow-hidden rounded-[22px] border border-[var(--hair)] bg-[rgba(242,238,230,0.02)] p-7 transition-colors duration-500 hover:border-[var(--hair-strong)] ${i % 2 ? 'sm:translate-y-16' : ''}`}
+                className={`mission-card group relative overflow-hidden rounded-[22px] border border-[var(--hair)] bg-[rgba(242,238,230,0.02)] p-7 transition-colors duration-500 hover:border-[var(--hair-strong)] ${i % 2 ? 'sm:translate-y-8' : ''}`}
               >
                 <span className="absolute right-6 top-6 h-2.5 w-2.5 bg-signal transition-transform duration-500 group-hover:scale-150" />
                 <h3 className="text-xl font-semibold">{c.title}</h3>

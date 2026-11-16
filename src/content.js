@@ -34,14 +34,6 @@ export const about = {
   cards: [
     { title: 'Mission', text: 'To help brands find clarity, create with purpose and grow with impact.' },
     { title: 'Vision', text: 'To become a global creative company known for curiosity, originality and meaningful work.' },
-    {
-      title: 'The studio',
-      text: 'Marketers, content creators, designers and an editor working as one team, from the first conversation to the final cut.',
-    },
-    {
-      title: 'Digilid Academy',
-      text: 'Our training arm, teaching digital content strategy, creative writing and digital marketing through structured programmes.',
-    },
   ],
   values: [
     { key: 'curiosity', title: 'Curiosity', text: 'Ask one more question.' },
