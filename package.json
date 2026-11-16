@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node --input-type=module -e \"import fs from 'fs'; fs.cpSync('dist/assets', 'assets', {recursive: true}); fs.copyFileSync('dist/index.html', 'index.html');\"",
     "build:single": "vite build --mode single",
     "preview": "vite preview"
   },
