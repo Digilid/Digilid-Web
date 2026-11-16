@@ -27,7 +27,7 @@ const Footer = forwardRef(function Footer({ reveal }, ref) {
             <br />
             that <span className="text-signal">lead.</span>
           </h2>
-          <div className="mt-8 flex flex-col items-start gap-4 sm:mt-10 sm:flex-row sm:items-center sm:gap-6">
+          <div className="mt-8 sm:mt-10">
             <Magnetic strength={0.4} className="w-full sm:w-auto">
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
@@ -37,12 +37,6 @@ const Footer = forwardRef(function Footer({ reveal }, ref) {
                 <Arrow className="arrow-nudge h-4 w-6" />
               </a>
             </Magnetic>
-            <a
-              href={`mailto:${CONTACT_EMAIL}`}
-              className="text-base sm:text-lg text-canvas/70 underline decoration-[var(--hair-strong)] underline-offset-8 transition-colors hover:text-canvas hover:decoration-signal break-all"
-            >
-              {CONTACT_EMAIL}
-            </a>
           </div>
         </div>
 
@@ -71,6 +65,8 @@ const Footer = forwardRef(function Footer({ reveal }, ref) {
                 <li key={label}>
                   <a
                     href={href}
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     className="inline-block rounded-full border border-[var(--hair-strong)] px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm text-canvas/80 transition-colors hover:border-signal hover:text-canvas"
                   >
                     {label}
@@ -83,16 +79,8 @@ const Footer = forwardRef(function Footer({ reveal }, ref) {
       </div>
 
       <div className="relative border-t border-[var(--hair)]">
-        <div className="mx-auto flex flex-col sm:grid sm:grid-cols-3 max-w-frame text-xs sm:text-sm text-canvas/45">
-          <p className="px-5 py-4 sm:px-8 sm:py-5">© {new Date().getFullYear()} Digilid. All rights reserved.</p>
-          <p className="border-t border-[var(--hair)] px-5 py-4 sm:border-t-0 sm:border-x sm:px-8 sm:py-5">
-            Curious by nature. Creative by instinct.
-          </p>
-          <p className="border-t border-[var(--hair)] px-5 py-4 sm:border-t-0 sm:px-8 sm:py-5 sm:text-right">
-            <a href="#top" onClick={(e) => go(e, '#top')} className="inline-flex items-center gap-1 transition-colors hover:text-canvas">
-              Back to top <span>↑</span>
-            </a>
-          </p>
+        <div className="mx-auto max-w-frame px-5 py-5 text-xs sm:text-sm text-canvas/45 sm:px-8">
+          <p>© {new Date().getFullYear()} Digilid. All rights reserved.</p>
         </div>
       </div>
     </footer>

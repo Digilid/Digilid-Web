@@ -128,7 +128,7 @@ export const footer = {
   socials: [
     ['Instagram', '#'],
     ['LinkedIn', '#'],
-    ['YouTube', '#'],
-    ['Behance', '#'],
+    ['WhatsApp', '#'],
+    ['Email', `mailto:${CONTACT_EMAIL}`],
   ],
 }
