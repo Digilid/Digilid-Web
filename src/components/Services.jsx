@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef, useState } from 'react'
-import { Linkedin, Youtube } from 'lucide-react'
 import { gsap, ScrollTrigger, useGSAP } from '../gsap'
 import { services } from '../content'
 import Icon from './icons'
@@ -203,10 +202,6 @@ export default function Services() {
         })
         tl.to('.arrow-head', { opacity: 1, duration: 0.3, stagger: 0.05 }, 2.9).to({}, { duration: 0.6 })
 
-        // Foreground social spheres drift with the scroll
-        const drift = { trigger: root.current, start: 'top bottom', end: '+=260%', scrub: true }
-        gsap.to('.sphere-l', { y: compact ? -40 : -110, rotation: -12, ease: 'none', scrollTrigger: drift })
-        gsap.to('.sphere-r', { y: compact ? -28 : -70, rotation: 10, ease: 'none', scrollTrigger: { ...drift } })
       })
 
       mm.add('(prefers-reduced-motion: reduce)', () => {
@@ -237,8 +232,8 @@ export default function Services() {
   }
 
   const nodeBtn = compact
-    ? { gap: 'gap-[6px]', ring: 'h-[30px] w-[30px]', icon: 'h-4 w-4', text: 'w-[86px]', label: 'text-[9.5px] tracking-[0.02em] leading-[1.15]', desc: 'mt-1 text-[8px] leading-[1.3]', shift: 15 }
-    : { gap: 'gap-5', ring: 'h-[68px] w-[68px]', icon: 'h-8 w-8', text: 'w-[210px]', label: 'text-[17px] tracking-[0.04em] leading-tight', desc: 'mt-1.5 text-[13px] leading-snug', shift: 34 }
+    ? { gap: 'gap-[6px]', ring: 'h-[30px] w-[30px]', icon: 'h-4 w-4', text: 'w-[86px]', label: 'text-[9.5px] tracking-[0.02em] leading-[1.15]', shift: 15 }
+    : { gap: 'gap-5', ring: 'h-[68px] w-[68px]', icon: 'h-8 w-8', text: 'w-[210px]', label: 'text-[17px] tracking-[0.04em] leading-tight', shift: 34 }
 
   return (
     <section
@@ -351,7 +346,6 @@ export default function Services() {
                   </span>
                   <span className={`block ${nodeBtn.text}`}>
                     <span className={`block font-extrabold uppercase transition-colors group-hover:text-signal ${nodeBtn.label}`}>{n.title}</span>
-                    <span className={`block text-canvas/50 ${nodeBtn.desc}`}>{n.text}</span>
                   </span>
                 </button>
               </li>
@@ -360,23 +354,6 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Blurred foreground social spheres */}
-      <a
-        href="#"
-        aria-label="Digilid on LinkedIn"
-        className="sphere-l absolute bottom-3 left-3 z-30 grid h-11 w-11 place-items-center rounded-full text-canvas/90 blur-[1px] transition-[filter] duration-500 hover:blur-0 sm:h-20 sm:w-20 min-[900px]:bottom-10 min-[900px]:left-6 min-[900px]:h-28 min-[900px]:w-28 min-[900px]:blur-[1.5px] xl:left-16"
-        style={{ background: 'radial-gradient(circle at 32% 28%, #4a4744, #1a1918 62%, #0b0b0b)', boxShadow: '0 30px 60px -10px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.12)' }}
-      >
-        <Linkedin className="h-5 w-5 sm:h-7 sm:w-7 min-[900px]:h-9 min-[900px]:w-9" strokeWidth={1.6} />
-      </a>
-      <a
-        href="#"
-        aria-label="Digilid on YouTube"
-        className="sphere-r absolute bottom-4 right-3 z-30 grid h-10 w-10 place-items-center rounded-full text-canvas blur-[1px] transition-[filter] duration-500 hover:blur-0 sm:h-[72px] sm:w-[72px] min-[900px]:bottom-16 min-[900px]:right-6 min-[900px]:h-24 min-[900px]:w-24 min-[900px]:blur-[2px] xl:right-16"
-        style={{ background: 'radial-gradient(circle at 32% 28%, #ff6b6a, #ee2e2d 45%, #8a1110)', boxShadow: '0 30px 60px -10px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.25)' }}
-      >
-        <Youtube className="h-[18px] w-[18px] sm:h-6 sm:w-6 min-[900px]:h-8 min-[900px]:w-8" strokeWidth={1.6} />
-      </a>
     </section>
   )
 }

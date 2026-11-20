@@ -48,16 +48,16 @@ export const services = {
   tagline: 'Smart Strategies. Real Results. Grow Your Brand Online.',
   word: 'AGENCY',
   left: [
-    { key: 'web', title: 'Web Development', text: 'Fast, considered websites built to convert.' },
-    { key: 'personal', title: 'Personal Branding', text: 'A clear, credible voice for founders and leaders.' },
-    { key: 'hosting', title: 'Hosting Services', text: 'Managed hosting, uptime and care after launch.' },
-    { key: 'video', title: 'Video Editing', text: 'Reels, films and edits cut for every platform.' },
+    { key: 'web', title: 'Web Development' },
+    { key: 'personal', title: 'Personal Branding' },
+    { key: 'hosting', title: 'Hosting Services' },
+    { key: 'video', title: 'Video Editing' },
   ],
   right: [
-    { key: 'ads', title: 'Paid Ads', text: 'Meta and Google campaigns tuned for return.' },
-    { key: 'seo', title: 'Search Engine Optimization', text: 'Be found by the people already looking for you.' },
-    { key: 'social', title: 'Social Media Marketing', text: 'Content calendars, community and growth.' },
-    { key: 'design', title: 'Graphics Design', text: 'Identity, campaigns and everything in between.' },
+    { key: 'ads', title: 'Paid Ads' },
+    { key: 'seo', title: 'Search Engine Optimization' },
+    { key: 'social', title: 'Social Media Marketing' },
+    { key: 'design', title: 'Graphics Design' },
   ],
 }
 
